@@ -1,6 +1,7 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import { resolve } from 'path'
+import cors from 'cors'
 
 import homeRoutes from './src/routes/homeRoutes'
 import veterinarioRoutes from './src/routes/veterinarioRoutes'
@@ -22,6 +23,29 @@ class App {
   }
 
   middlewares() {
+    const corsOptions = {
+      origin: ['http://localhost:3000', 'https://localhost:5173'],  // Múltiplas origens
+
+      // Permite envio de cookies e headers de autenticação
+      credentials: true,
+
+      // Métodos HTTP permitidos
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+
+      // Headers permitidos
+      allowedHeaders: ['Content-Type', 'Authorization'],
+
+      // Headers expostos ao frontend
+      exposedHeaders: ['X-Total-Count'],
+
+      // Cache da resposta preflight (em segundos)
+      maxAge: 86400, // 24 horas
+
+      // Status de sucesso para requisições OPTIONS
+      optionsSuccessStatus: 200
+    }
+
+    this.app.use(cors(corsOptions))
     this.app.use(express.urlencoded({
       extended: true
     }))
