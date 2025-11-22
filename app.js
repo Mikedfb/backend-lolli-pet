@@ -1,17 +1,25 @@
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// --- SHIM PARA __dirname e __filename ---
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 import dotenv from 'dotenv'
 import express from 'express'
 import { resolve } from 'path'
 import cors from 'cors'
 
-import homeRoutes from './src/routes/homeRoutes'
-import veterinarioRoutes from './src/routes/veterinarioRoutes'
-import tokenRoutes from './src/routes/tokenRoutes'
-import fotoRoutes from './src/routes/fotoRoutes'
-import clienteRoutes from './src/routes/clienteRoutes'
-import petRoutes from './src/routes/petRoutes'
-import agendamentoRoutes from './src/routes/agendamentoRoutes'
+import homeRoutes from './src/routes/homeRoutes.js'
+import veterinarioRoutes from './src/routes/veterinarioRoutes.js'
+import tokenRoutes from './src/routes/tokenRoutes.js'
+import fotoRoutes from './src/routes/fotoRoutes.js'
+import clienteRoutes from './src/routes/clienteRoutes.js'
+import petRoutes from './src/routes/petRoutes.js'
+import agendamentoRoutes from './src/routes/agendamentoRoutes.js'
 
-import './src/database'
+import './src/database/index.js'
 
 dotenv.config()
 

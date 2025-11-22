@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import veterinarioController from '../controllers/VeterinarioController'
-import loginRequired from '../middlewares/loginRequired'
+import veterinarioController from '../controllers/VeterinarioController.js'
+import loginRequired from '../middlewares/loginRequired.js'
 
 const router = new Router()
 

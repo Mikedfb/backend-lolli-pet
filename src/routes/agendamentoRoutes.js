@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import agendamentoController from '../controllers/AgendamentoController'
-import loginRequired from '../middlewares/loginRequired'
+import agendamentoController from '../controllers/AgendamentoController.js'
+import loginRequired from '../middlewares/loginRequired.js'
 
 const router = new Router()
 

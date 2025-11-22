@@ -1,4 +1,4 @@
-import Veterinario from '../models/Veterinario'
+import Veterinario from '../models/Veterinario.js'
 
 class VeterinarioController {
   async store(req, res) {

@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import clienteController from '../controllers/ClienteController'
-import loginRequired from '../middlewares/loginRequired'
+import clienteController from '../controllers/ClienteController.js'
+import loginRequired from '../middlewares/loginRequired.js'
 
 const router = new Router()
 

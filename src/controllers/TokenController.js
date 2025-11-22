@@ -1,4 +1,4 @@
-import Veterinario from '../models/Veterinario'
+import Veterinario from '../models/Veterinario.js'
 import jwt from 'jsonwebtoken'
 
 class TokenController {

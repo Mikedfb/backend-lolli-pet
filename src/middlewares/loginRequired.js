@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import Veterinario from '../models/Veterinario'
+import Veterinario from '../models/Veterinario.js'
 
 export default async(req, res, next) => {
   const { authorization } = req.headers

@@ -1,10 +1,10 @@
 import Sequelize from 'sequelize'
-import databaseConfig from '../config/database'
-import Veterinario from '../models/Veterinario'
-import Foto from '../models/Foto'
-import Cliente from '../models/Cliente'
-import Pet from '../models/Pet'
-import Agendamento from '../models/Agendamento'
+import databaseConfig from '../config/database.js'
+import Veterinario from '../models/Veterinario.js'
+import Foto from '../models/Foto.js'
+import Cliente from '../models/Cliente.js'
+import Pet from '../models/Pet.js'
+import Agendamento from '../models/Agendamento.js'
 
 const models = [Veterinario, Foto, Cliente, Pet, Agendamento]
 

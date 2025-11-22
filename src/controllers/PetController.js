@@ -1,5 +1,5 @@
-import Pet from '../models/Pet'
-import Cliente from '../models/Cliente'
+import Pet from '../models/Pet.js'
+import Cliente from '../models/Cliente.js'
 
 class PetController {
     async store(req, res) {

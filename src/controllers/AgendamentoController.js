@@ -1,6 +1,6 @@
-import Agendamento from '../models/Agendamento'
-import Pet from '../models/Pet'
-import Veterinario from '../models/Veterinario'
+import Agendamento from '../models/Agendamento.js'
+import Pet from '../models/Pet.js'
+import Veterinario from '../models/Veterinario.js'
 
 class AgendamentoController {
   async store(req, res) {

@@ -1,5 +1,5 @@
 import Sequelize, { Model } from 'sequelize'
-import urlConfig from '../config/urlConfig'
+import urlConfig from '../config/urlConfig.js'
 
 export default class Foto extends Model {
   static init(sequelize) {

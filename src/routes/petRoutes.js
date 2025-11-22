@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import petController from '../controllers/PetController'
-import loginRequired from '../middlewares/loginRequired'
+import petController from '../controllers/PetController.js'
+import loginRequired from '../middlewares/loginRequired.js'
 
 const router = new Router()
 
