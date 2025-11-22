@@ -18,6 +18,7 @@ import fotoRoutes from './src/routes/fotoRoutes.js'
 import clienteRoutes from './src/routes/clienteRoutes.js'
 import petRoutes from './src/routes/petRoutes.js'
 import agendamentoRoutes from './src/routes/agendamentoRoutes.js'
+import prontuarioRoutes from './src/routes/prontuarioRoutes.js'
 
 import './src/database/index.js'
 
@@ -32,7 +33,7 @@ class App {
 
   middlewares() {
     const corsOptions = {
-      origin: ['http://localhost:3000', 'http://localhost:5173'],
+      origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174'],
 
       // Permite envio de cookies e headers de autenticação
       credentials: true,
@@ -69,6 +70,7 @@ class App {
     this.app.use('/clientes', clienteRoutes)
     this.app.use('/pets', petRoutes)
     this.app.use('/agendamentos', agendamentoRoutes)
+    this.app.use('/prontuarios', prontuarioRoutes)
   }
 }
 
